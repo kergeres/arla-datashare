@@ -36,9 +36,41 @@ header {
     text-transform: uppercase;
 }
 
+main{
+    background-image: url(../img/climate-cows.jpg);
+    background-repeat: no-repeat;
+}
+.welcome{
+    position: absolute;
+    color: #ffffff;
+    top: 22%;
+    left: 5%;
+}
 .logo {
     width: 100px;
     margin-left: 20px;
+}
+
+
+h1{
+    font-size: 30pt;
+}
+
+h3{
+   font-size: 18pt; 
+}
+
+.share{
+    margin-top: 20px;
+    padding: 8px;
+    width: 260px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 4px white;
+    background: rgba(0, 0, 0, 0.25);
+    font-size: 12pt;
+    font-weight: 700;
+    color: white;
 }
 
 ul {
