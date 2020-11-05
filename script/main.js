@@ -1,7 +1,7 @@
 function string_validate (id_comes_in)
 {
    let input = document.querySelector(".input-field");
-   // let input = document.querySelector(`${id_comes_in}`);
+  
    let inputval = input.value;
 
 
@@ -59,21 +59,19 @@ function appendSecond ()
    <div class="input-small-container">
        <h4>Kg dry matter per cow</h4>
        <p>Enter the amount of feed consumption per cow.</p>
-       <input id="ifirst" class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="ifirst" class="input-field" placeholder="test" onkeyup="string_validate(input-field)">
    </div>
 
     <div class="input-small-container">
        <h4>Kg milk pr year-cow</h4>
        <p>Enter the amount of the milk production in kg for the current year.</p>
-       <input id="isecond" class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="isecond" class="input-field" placeholder="test" onkeyup="string_validate(input-field)">
    </div>
     <div class="input-small-container">
        <h4>Nr. of cows</h4>
        <p>Enter the amount of cows you have right now.</p>
        <input id="ithird" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
-
-
 
 
    <div class="navigate-btn-container">
