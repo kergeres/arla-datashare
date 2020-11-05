@@ -31,6 +31,26 @@ let four = "";
 let five = "";
 let six = "";
 
+
+function appendFirst ()
+{
+   
+   let htmltemplate = `  
+   <img src="img/progress1.svg" class="processbar"></img>
+   
+   <h1>first first first</h1>
+
+
+
+   <div class="navigate-btn-container">
+       <button type="submit" class="back">back</button>
+       <button type="submit" onclick="appendSecond()" class=" next">next</button>
+   </div>`;
+
+document.querySelector(".input-container").innerHTML = htmltemplate;
+
+}
+
 function appendSecond ()
 {
    
@@ -57,7 +77,7 @@ function appendSecond ()
 
 
    <div class="navigate-btn-container">
-       <button type="submit" class="back">back</button>
+       <button type="submit" onclick="appendFirst()" class="back">back</button>
        <button type="submit" onclick="appendThird()" class=" next">next</button>
    </div>`;
 
@@ -66,9 +86,7 @@ document.querySelector(".input-container").innerHTML = htmltemplate;
 }
 function appendThird ()
 {
-    one = document.querySelector("#ifirst").value;
-    two = document.querySelector("#isecond").value;
-    three = document.querySelector("#ithird").value;
+    
    let htmltemplate = `  <img src="img/progress3.svg" class="processbar"></img>
    <div class="input-small-container">
        <h4>Diesel litre</h4>
@@ -99,8 +117,6 @@ document.querySelector(".input-container").innerHTML = htmltemplate;
 console.log(one, two, three);
 }
 
-
-
 function appendFourth ()
 {
    four = document.querySelector("#ifourth").value;
@@ -109,6 +125,7 @@ function appendFourth ()
    console.log(four, five, six);
    
    let data = `
+   <img src="img/progress4.svg" class="processbar"></img>
    <table>
                     <tbody>
                         <tr>
@@ -138,18 +155,13 @@ function appendFourth ()
                     </tbody>
                 </table>
                 <div class="navigate-btn-container">
-       <button type="submit"  onclick="appendSecond()"class="back">back</button>
-       <button type="submit" onclick="appendFourth()" class=" next">next</button>
-   </div>
-                `;
+                  <button type="submit"  onclick="appendThird()" class="back">Change</button>
+                  <button type="submit" onclick="appendFourth()" class=" next">Send In</button>
+               </div>`;
                 document.querySelector(".input-container").innerHTML = data;
 }
 
-function appendData ()
-{
-   
 
-}
 
 
 
