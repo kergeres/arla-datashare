@@ -108,37 +108,6 @@ function appendFourth ()
    six = document.querySelector("#isixth").value;
    console.log(four, five, six);
    
-   let htmltemplate = `  <img src="img/progress4.svg" class="processbar"></img>
-   <div class="input-small-container">
-       <h4>Diesel litre</h4>
-       <p>Enter the amount of fuel used for whole farm.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
-   </div>
-
-    <div class="input-small-container">
-       <h4>Electricity kWh</h4>
-       <p>Enter the amount of electricity you have used for your farm.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
-   </div>
-    <div class="input-small-container">
-       <h4>Self-sufficiency in feed</h4>
-       <p>% of dry matter</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
-   </div>
-
-
-
-
-   <div class="navigate-btn-container">
-       <button type="submit"  onclick="appendSecond()"class="back">back</button>
-       <button type="submit" onclick="appendData()" class=" next">next</button>
-   </div>`;
-
-document.querySelector(".input-container").innerHTML = htmltemplate;
-}
-
-function appendData ()
-{
    let data = `
    <table>
                     <tbody>
@@ -168,8 +137,17 @@ function appendData ()
                         </tr>
                     </tbody>
                 </table>
+                <div class="navigate-btn-container">
+       <button type="submit"  onclick="appendSecond()"class="back">back</button>
+       <button type="submit" onclick="appendFourth()" class=" next">next</button>
+   </div>
                 `;
                 document.querySelector(".input-container").innerHTML = data;
+}
+
+function appendData ()
+{
+   
 
 }
 
