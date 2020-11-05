@@ -22,24 +22,35 @@ function string_validate (id_comes_in)
 
 }
 
+// the following 4 function is made for display the form
+
+let one = "";
+let two = "";
+let three = "";
+let four = "";
+let five = "";
+let six = "";
+
 function appendSecond ()
 {
-   let htmltemplate = `  <img src="img/progress2.svg" class="processbar"></img>
+   
+   let htmltemplate = `  
+   <img src="img/progress2.svg" class="processbar"></img>
    <div class="input-small-container">
        <h4>Kg dry matter per cow</h4>
        <p>Enter the amount of feed consumption per cow.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="ifirst" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
 
     <div class="input-small-container">
        <h4>Kg milk pr year-cow</h4>
        <p>Enter the amount of the milk production in kg for the current year.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="isecond" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
     <div class="input-small-container">
        <h4>Nr. of cows</h4>
        <p>Enter the amount of cows you have right now.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="ithird" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
 
 
@@ -51,25 +62,29 @@ function appendSecond ()
    </div>`;
 
 document.querySelector(".input-container").innerHTML = htmltemplate;
+
 }
 function appendThird ()
 {
+    one = document.querySelector("#ifirst").value;
+    two = document.querySelector("#isecond").value;
+    three = document.querySelector("#ithird").value;
    let htmltemplate = `  <img src="img/progress3.svg" class="processbar"></img>
    <div class="input-small-container">
        <h4>Diesel litre</h4>
        <p>Enter the amount of fuel used for whole farm.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="ifourth" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
 
     <div class="input-small-container">
        <h4>Electricity kWh</h4>
        <p>Enter the amount of electricity you have used for your farm.</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input  id="ififth" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
     <div class="input-small-container">
        <h4>Self-sufficiency in feed</h4>
        <p>% of dry matter</p>
-       <input class="input-field" placeholder="test" onkeyup="string_validate()">
+       <input id="isixth" class="input-field" placeholder="test" onkeyup="string_validate()">
    </div>
 
 
@@ -81,9 +96,18 @@ function appendThird ()
    </div>`;
 
 document.querySelector(".input-container").innerHTML = htmltemplate;
+console.log(one, two, three);
 }
+
+
+
 function appendFourth ()
 {
+   four = document.querySelector("#ifourth").value;
+   five = document.querySelector("#ififth").value;
+   six = document.querySelector("#isixth").value;
+   console.log(four, five, six);
+   
    let htmltemplate = `  <img src="img/progress4.svg" class="processbar"></img>
    <div class="input-small-container">
        <h4>Diesel litre</h4>
@@ -107,13 +131,47 @@ function appendFourth ()
 
    <div class="navigate-btn-container">
        <button type="submit"  onclick="appendSecond()"class="back">back</button>
-       <button type="submit" onclick="appendFourth()" class=" next">next</button>
+       <button type="submit" onclick="appendData()" class=" next">next</button>
    </div>`;
 
 document.querySelector(".input-container").innerHTML = htmltemplate;
 }
 
+function appendData ()
+{
+   let data = `
+   <table>
+                    <tbody>
+                        <tr>
+                            <td>Feed consumption</td>
+                            <td>${one}</td>
+                        </tr>
+                        <tr>
+                            <td>Milk production</td>
+                            <td>${two}</td>
+                        </tr>
+                        <tr>
+                            <td>Nr. of cows</td>
+                            <td>${three}</td>
+                        </tr>
+                        <tr>
+                            <td>Diesel litre</td>
+                            <td>${four}</td>
+                        </tr>
+                        <tr>
+                            <td>Electricity kWh</td>
+                            <td>${five}</td>
+                        </tr>
+                        <tr>
+                            <td>Self-sufficiency in feed</td>
+                            <td>${six}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                `;
+                document.querySelector(".input-container").innerHTML = data;
 
+}
 
 
 
