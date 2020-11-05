@@ -81,7 +81,7 @@ function appendSecond ()
    <div class="input-small-container">
        <h4>Kg dry matter per cow</h4>
        <p>Enter the amount of feed consumption per cow.</p>
-       <input id="ifirst"  value="${one}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
+       <input id="ifirst" required value="${one}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
 
     <div class="input-small-container">
@@ -130,7 +130,7 @@ function appendThird ()
     <div class="input-small-container">
        <h4>Self-sufficiency in feed</h4>
        <p>% of dry matter</p>
-       <input id="isixth" value="${six}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
+       <input id="isixth"  value="${six}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
 
 
