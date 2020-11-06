@@ -1,0 +1,22 @@
+[
+    {
+      "date": "2015",
+      "carbonDioxideWholeFarm": 504.46
+    },
+    {
+      "date": "2016",
+      "carbonDioxideWholeFarm": 445.56
+    },
+    {
+        "date": "2017",
+        "carbonDioxideWholeFarm": 464.51
+      },
+      {
+        "date": "2018",
+        "carbonDioxideWholeFarm": 399.70
+      },
+    {
+      "date": "2019",
+      "carbonDioxideWholeFarm": 370.85
+    }
+  ]

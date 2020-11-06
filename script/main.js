@@ -197,6 +197,78 @@ function appendFourth ()
                 document.querySelector(".input-container-big").innerHTML = data;
 }
 
+// 1: data
+// Array of objects
+let _data = [];
+
+async function getData() {
+  let response = await fetch("json/data.json");
+  _data = await response.json();
+  appendChart();
+};
+
+getData();
+
+// 2: prepare data for chart
+// seperating the objects to arrays: dates and infected
+// why? that's how chart.js reads the data :)
+function prepareData(data) {
+  // declaring two array to store the data 
+  let dates = [];
+  let carbon = [];
+  // looping through the data array
+  for (const object of data) {
+    // adding the values to the different arrays
+    dates.push(object.date);
+    carbon.push(object.carbonDioxideWholeFarm);
+  }
+  // returning the two arrays inside and object
+  // we cannot return to values - that's why we have to do it inside an array
+  return {
+    dates,
+    carbon
+  };
+}
+
+// 3: create and append the chart
+function appendChart() {
+  // using prepareData() to get the excact data we want
+  let data = prepareData(_data);
+  //open the developer console to inspect the result
+  console.log(data);
+  let chartContainer = document.getElementById('chartContainer');
+  let chart = new Chart(chartContainer, {
+    // The type of chart we want to create
+    type: 'line',
+    // The data for our dataset
+    data: {
+      labels: data.dates, // refering to the data object, holding data from prepareData()
+      datasets: [{
+        data: data.carbon, // refering to the data object, holding data from prepareData()
+        label: 'Ton Carbon dioxide',
+        backgroundColor: '#9aba6a', // Customise the graf color etc. Go to the docs to find more: https://www.chartjs.org/docs/latest/
+        borderColor: '#19a413'
+      }]
+    },
+    // Configuration options goes here
+    // Go to the docs to find more: https://www.chartjs.org/docs/latest/
+    options: {
+        scales: {
+            yAxes: [{
+              ticks: {
+                min: 100,
+                max: 700
+              }
+            }]
+          },
+        title: {
+            display: true,
+            text: 'Carbon footprint for the whole farm'
+        }
+    }
+
+  });
+}
 
 
 
