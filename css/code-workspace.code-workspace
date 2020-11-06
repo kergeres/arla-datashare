@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "fonts",
+			"path": "..\\..\\mdu-e19front\\arla-fonts\\fonts"
+		},
+		{
+			"name": "arla-datashare",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "arla-datashare"
+	}
+}

@@ -14,7 +14,7 @@
 
 <body onload="appendWelcome()">
     <header>
-        <img src="img/arla_logo.png"  class="logo">
+        <img src="img/arla_logo.png" class="logo">
         <nav>
             <ul class="menu">
                 <li>news</li>
@@ -26,15 +26,99 @@
     </header>
 
     <main>
-        
-        <section id="datasharing">
-            <div class="input-container-big">
-                
+
+        <div id="arla-background">
+            <div class="welcome">
+                <h1>Welcome to the data collecting process!</h1>
+                <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
+                <button class="share">SHARE THE DATA</button>
+            </div>
+        </div>
+        <div id="slider" class="carousel">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <div class="blue-slide">
+                                    <p class="slide-text">Here you can find quick guide which will help you to go
+                                        throught the process with
+                                        ease. You can also jump straight to it and we are sure you will do great because
+                                        it's
+                                        very easy</p>
+                                </div>
+                                <div class="slide-photo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <div class="slide-photo-2"></div>
+                                <div class="gray-slide">
+                                    <p class="slide-text">You will get 0,01 Euro more for kg of milk.
+                                        Our purpose is to help you save money, time and become more envitonment
+                                        friendly.
+                                        At the end you will get list of tips tailored especially for you!
+                                        They may help you to have better quality milk.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide_3">
+                            <div class="slide-content">
+                                <div class="pink-slide">
+                                    <p class="slide-text">The more data you put the better tips you get.
+                                        If you do it on time you get a streak, which gives you some special bonuses.
+                                        Together we can make a difference and preserve natural ecosystems throughout the
+                                        world.
+                                    </p>
+                                </div>
+                                <div class="slide-photo-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+            <!-- <section id="landing">
+
+    <div class="landing-first"></div>
+    <div class="landing-second-r"></div>
+    <div class="landing-second-l">Here you can find quick guide which will help you to go throught the process with ease. 
+        But you can jump straight to it and we are sure you will do great because it's very easy :)</div>
+    <div class="landing-third-r">You will get 0,01 Euro more for kg of milk.
+        Our purpose is to help you save money, time and become more envitonment friendly.
+        At the end you will get list of tips tailored especially for you!</div>
+    <div class="landing-third-l"></div>
+    <div class="landing-fourth-r"></div>
+    <div class="landing-fourth-l">We want to encourage you to improve so we made a leaderboard where the farms with lowest C02 emmiston will be awarded.
+        If you don't want your score to be sharded it's not mandatory.</div>
+        <div class="end">
+            <h3>start data sharing</h3>
+
+        </div>
+</section> -->
+
+            <section id="datasharing">
+                <div class="input-container-big">
 
 
-                
 
-                <!-- <img src="img/progress3.svg" class="processbar"></img>
+
+
+                    <!-- <img src="img/progress3.svg" class="processbar"></img>
                 <div class="input-small-container">
                     <h4>Diesel litre</h4>
                     <p>Enter the amount of fuel used for whole farm.</p>
@@ -55,30 +139,29 @@
 
 
 
-                <!-- <div class="navigate-btn-container">
+                    <!-- <div class="navigate-btn-container">
                     <button type="submit"  onclick="appendSecond()"class="back">back</button>
                     <button type="submit"  onclick="appendSecond()" class=" next">next</button>
                 </div> -->
 
 
 
+                </div>
+            </section>
+
+            <div class="chart-container">
+                <canvas id="chartContainer"></canvas>
             </div>
-        </section>
-        
-        <div class="chart-container">
-            <canvas id="chartContainer"></canvas>
-        </div>
-        
+
 
 
     </main>
 
 
-
     <script src="script/main.js"></script>
-     <!--- Load chart.js from CDN --->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    
+    <!--- Load chart.js from CDN --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
 </body>
 
 </html>
