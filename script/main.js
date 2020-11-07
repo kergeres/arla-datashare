@@ -138,7 +138,7 @@ function appendThird ()
 
    <div class="navigate-btn-container">
        <button type="submit"  onclick="appendSecond()"class="back">back</button>
-       <button type="submit" onclick="appendFourth()" class=" next">next</button>
+       <button type="submit" onclick="appendFourth(); getData()" class=" next">next</button>
    </div>
    </div>
    </div>
@@ -205,14 +205,24 @@ function empty()
 // 1: data
 // Array of objects
 let _data = [];
-
+console.log(three);
 async function getData() {
   let response = await fetch("json/data.json");
   _data = await response.json();
-  ;
+  
+  let newCo = {
+    date: "2020",
+    carbonDioxideWholeFarm: three
 };
 
-getData();
+_data.push(newCo);
+console.log(_data);
+};
+
+
+
+
+
 
 // 2: prepare data for chart
 // seperating the objects to arrays: dates and infected
@@ -272,7 +282,9 @@ function appendChart() {
         }
     }
 
-  });
+  }
+  
+  );
 }
 
 
