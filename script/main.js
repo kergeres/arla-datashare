@@ -222,7 +222,7 @@ async function getData() {
   footprintCalculation();
   
   let newCo = {
-    date: "2020",
+    date: "This year (2020)",
     carbonDioxideWholeFarm: footprintCalculated
 };
 
