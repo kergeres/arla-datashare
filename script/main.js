@@ -1,10 +1,9 @@
+
+//$ for validate the inputfields if their values are numbers 
 function string_validate (input)
 {
-
-   // let input = document.querySelector(".input-field");
+    // the "input" parameters is always the value of the actual inputfield
    let inputval = input.value;
-
-
    if (isNaN(inputval))
    { console.log('ja, it is a string');
    input.style.borderColor  = "red"
@@ -22,22 +21,21 @@ function string_validate (input)
 
 }
 
-
-
-
-
+// onload the spa first page appends 
 function appendWelcome ()
 {
    let htmltemplate = `
-   <div class="welcome-container">
-                <div class="welcome">
-                    <h1>Welcome to the data collecting process!</h1>
-                    <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
-                    <button onclick="appendFirst()" class="share">SHARE THE DATA</button>
-                </div>
-            </div>`;
+        <div class="welcome-container">
+            <div class="welcome">
+                <h1>Welcome to the data collecting process!</h1>
+                <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
+                <button onclick="appendFirst()" class="share">SHARE THE DATA</button>
+            </div>
+        </div>`;
             document.querySelector(".input-container-big").innerHTML = htmltemplate;
 }
+
+// these variables store the input fields value
 let one = "";
 let two = "";
 let three = "";
@@ -45,37 +43,32 @@ let four = "";
 let five = "";
 let six = "";
 
-// the following 4 function is made for display the form
+// the following 4 (append-first-second-etc) function is made for display the form
 
 function appendFirst ()
 {
-   
    let htmltemplate = `  
    <div class="bg-input-container">
    <div class="input-container">
    <img src="img/progress1.svg" class="processbar"></img>
-   
    <h1>first first first</h1>
-
-
-
    <div class="navigate-btn-container">
        <button type="submit"  onclick="appendWelcome()" class="back">back</button>
        <button type="submit" onclick="appendSecond()" class=" next">next</button>
    </div>
    </div>
-   </div>`
-   ;
+   </div>`;
 
-document.querySelector(".input-container-big").innerHTML = htmltemplate;
+    document.querySelector(".input-container-big").innerHTML = htmltemplate;
 
 }
 
 function appendSecond ()
 {
-   
+    // i give vale for every input field. this is for if the user want to rewrite data
+    
    let htmltemplate = ` 
-   <div class="bg-input-container">
+    <div class="bg-input-container">
    <div class="input-container"> 
    <img src="img/progress2.svg" class="processbar"></img>
    <div class="input-small-container">
@@ -98,17 +91,17 @@ function appendSecond ()
 
    <div class="navigate-btn-container">
        <button type="submit" onclick="appendFirst()" class="back">back</button>
-       <button type="submit" onclick="appendThird()" class=" next">next</button>
+       <button type="submit" onclick="appendThird(); getData()" class=" next">next</button>
    </div>
    </div>
-   </div>`
-   ;
+   </div>`;
 
-document.querySelector(".input-container-big").innerHTML = htmltemplate;
+    document.querySelector(".input-container-big").innerHTML = htmltemplate;
 
 }
 function appendThird ()
 {
+    // declare the inputfield data into the variables
    one = document.querySelector("#ifirst").value;
    two = document.querySelector("#isecond").value;
    three = document.querySelector("#ithird").value;
@@ -138,7 +131,7 @@ function appendThird ()
 
    <div class="navigate-btn-container">
        <button type="submit"  onclick="appendSecond()"class="back">back</button>
-       <button type="submit" onclick="appendFourth(); getData()" class=" next">next</button>
+       <button type="submit" onclick="appendFourth()" class=" next">next</button>
    </div>
    </div>
    </div>
@@ -150,11 +143,11 @@ document.querySelector(".input-container-big").innerHTML = htmltemplate;
 
 function appendFourth ()
 {
+    // declare the inputfield data into the variables
    four = document.querySelector("#ifourth").value;
    five = document.querySelector("#ififth").value;
    six = document.querySelector("#isixth").value;
 
-   
    let data = `
    <div class="bg-input-container">
    <div class="input-container">
@@ -185,6 +178,10 @@ function appendFourth ()
                             <td onclick="appendSecond()">Self-sufficiency in feed</td>
                             <td>${six}</td>
                         </tr>
+                        <tr>
+                            <td onclick="appendSecond()">Co2 Footprint</td>
+                            <td>${footprintCalculated}</td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="navigate-btn-container">
@@ -196,48 +193,42 @@ function appendFourth ()
                `;
                 document.querySelector(".input-container-big").innerHTML = data;
 }
+// the empty func is for close the datasharing section and "give space" for the chart
 function empty()
 {
-    let empty = ""
-    document.querySelector(".input-container-big").innerHTML = empty;
+    
     document.querySelector("#datasharing").style.display  = "none"
+    document.querySelector("#chart-section").style.display  = "flex"
 }
-// 1: data
-// Array of objects
-let _data = [];
 
+// "fake" calculation for co2 footprint, just to show how it would work with real formula
 let footprintCalculated = 0;
-
 function footprintCalculation()
 {
+    // because we do not know the formula to calculate co2 footprintCalculated, there 
+    // is created a calculation which will always give back the value 554
     footprintCalculated = (parseInt(one) + parseInt(two)) * 0 + (554);
-    console.log(footprintCalculated);
+    
 }
 
-
-
+// prepare and append the data 
+let _data = [];
+// 1 get the data
 async function getData() {
   let response = await fetch("json/data.json");
   _data = await response.json();
   footprintCalculation();
-  
+
+//   push the calculated data into the "original" data array
   let newCo = {
     date: "This year (2020)",
     carbonDioxideWholeFarm: footprintCalculated
 };
 
 _data.push(newCo);
-console.log(_data);
 };
 
-
-
-
-
-
 // 2: prepare data for chart
-// seperating the objects to arrays: dates and infected
-// why? that's how chart.js reads the data :)
 function prepareData(data) {
   // declaring two array to store the data 
   let dates = [];
@@ -248,8 +239,6 @@ function prepareData(data) {
     dates.push(object.date);
     carbon.push(object.carbonDioxideWholeFarm);
   }
-  // returning the two arrays inside and object
-  // we cannot return to values - that's why we have to do it inside an array
   return {
     dates,
     carbon
@@ -260,13 +249,11 @@ function prepareData(data) {
 function appendChart() {
   // using prepareData() to get the excact data we want
   let data = prepareData(_data);
-  //open the developer console to inspect the result
-  console.log(data);
+  
   let chartContainer = document.getElementById('chartContainer');
   let chart = new Chart(chartContainer, {
-    // The type of chart we want to create
     type: 'line',
-    // The data for our dataset
+    
     data: {
       labels: data.dates, // refering to the data object, holding data from prepareData()
       datasets: [{
@@ -276,8 +263,7 @@ function appendChart() {
         borderColor: '#19a413'
       }]
     },
-    // Configuration options goes here
-    // Go to the docs to find more: https://www.chartjs.org/docs/latest/
+   
     options: {
         scales: {
             yAxes: [{
