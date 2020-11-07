@@ -1,5 +1,6 @@
 
-//$ for validate the inputfields if their values are numbers 
+// for validate the inputfields if their values are numbers
+//--David Papp
 function string_validate (input)
 {
     // the "input" parameters is always the value of the actual inputfield
@@ -21,7 +22,8 @@ function string_validate (input)
 
 }
 
-// onload the spa first page appends 
+// onload the spa first page appends
+// --David Papp
 function appendWelcome ()
 {
    let htmltemplate = `
@@ -43,7 +45,8 @@ let four = "";
 let five = "";
 let six = "";
 
-// the following 4 (append-first-second-etc) function is made for display the form
+// the following 4 (append-first-second-etc) function is made for display the form 
+//--David Papp
 
 function appendFirst ()
 {
@@ -194,6 +197,7 @@ function appendFourth ()
                 document.querySelector(".input-container-big").innerHTML = data;
 }
 // the empty func is for close the datasharing section and "give space" for the chart
+//--David Papp 
 function empty()
 {
     
@@ -202,6 +206,7 @@ function empty()
 }
 
 // "fake" calculation for co2 footprint, just to show how it would work with real formula
+//--David Papp 
 let footprintCalculated = 0;
 function footprintCalculation()
 {
@@ -214,12 +219,14 @@ function footprintCalculation()
 // prepare and append the data 
 let _data = [];
 // 1 get the data
+//--Georgiana Sabau, David Papp
 async function getData() {
+
   let response = await fetch("json/data.json");
   _data = await response.json();
   footprintCalculation();
 
-//   push the calculated data into the "original" data array
+//push the calculated data into the "original" data array -- David Papp
   let newCo = {
     date: "This year (2020)",
     carbonDioxideWholeFarm: footprintCalculated
@@ -228,7 +235,8 @@ async function getData() {
 _data.push(newCo);
 };
 
-// 2: prepare data for chart
+// 2: prepare data for chart 
+//--Georgiana Sabau
 function prepareData(data) {
   // declaring two array to store the data 
   let dates = [];
@@ -245,15 +253,14 @@ function prepareData(data) {
   };
 }
 
-// 3: create and append the chart
+// 3: create and append the chart 
+//--Georgiana Sabau
 function appendChart() {
   // using prepareData() to get the excact data we want
   let data = prepareData(_data);
-  
   let chartContainer = document.getElementById('chartContainer');
   let chart = new Chart(chartContainer, {
     type: 'line',
-    
     data: {
       labels: data.dates, // refering to the data object, holding data from prepareData()
       datasets: [{
@@ -263,7 +270,6 @@ function appendChart() {
         borderColor: '#19a413'
       }]
     },
-   
     options: {
         scales: {
             yAxes: [{
@@ -278,9 +284,7 @@ function appendChart() {
             text: 'Carbon footprint for the whole farm'
         }
     }
-
   }
-  
   );
 }
 
