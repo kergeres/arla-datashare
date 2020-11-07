@@ -205,14 +205,25 @@ function empty()
 // 1: data
 // Array of objects
 let _data = [];
-console.log(three);
+
+let footprintCalculated = 0;
+
+function footprintCalculation()
+{
+    footprintCalculated = (parseInt(one) + parseInt(two)) * 0 + (554);
+    console.log(footprintCalculated);
+}
+
+
+
 async function getData() {
   let response = await fetch("json/data.json");
   _data = await response.json();
+  footprintCalculation();
   
   let newCo = {
     date: "2020",
-    carbonDioxideWholeFarm: three
+    carbonDioxideWholeFarm: footprintCalculated
 };
 
 _data.push(newCo);
