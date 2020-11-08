@@ -289,6 +289,7 @@ tr td:first-child {
     cursor: pointer;
     transition: 0.3s;
     width: 300px;
+    padding: 5px 0px;
 
 }
 
@@ -1074,8 +1075,16 @@ input[type=checkbox] {
     }
 }
 
-
-
 .table{
     margin-top: 40px;
+}
+
+.tips{
+    height: 30px;
+    width: 140px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--success);
 }
