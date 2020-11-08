@@ -50,13 +50,61 @@ function appendFirst() {
    <div class="input-container">
    <img src="img/progress1.svg" class="processbar"></img>
    
-   <h1>first first first</h1>
+   
+    <div class="check">
+     <h1 class="cb">Before we start please tell us what are your most important goals, <br>
+         so we can give you more tailored Tips and Tricks</h1>
+         <div class="row">
+             <div class="column">
+                 <div style="align-content: center">
+                 <input type="checkbox" id="myCheck" onclick="myFunction()">
+                 <label for="myCheck">Helping the environment</label>
+                 </div>
+                 <br>
+                 <input type="checkbox" id="myCheck1" onclick="myFunction()">
+                 <label for="myCheck">Having happy cows</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck2" onclick="myFunction()">
+                 <label for="myCheck">Spending less time in work</label>
+                 <br>
+                 <input type="checkbox" id="myCheck3" onclick="myFunction()">
+                 <label for="myCheck">Reducing N2O loses</label>
+             </div>
+             <div class="column">
+                 <input type="checkbox" id="myCheck4" onclick="myFunction()">
+                 <label for="myCheck">Saving money</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck5" onclick="myFunction()">
+                 <label for="myCheck">Making my work easier</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck6" onclick="myFunction()">
+                 <label for="myCheck">Producing more crops</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck7" onclick="myFunction()">
+                 <label for="myCheck">Having more cows</label>
+             </div>
+           </div>
+
+
+
+<p id="text" style="display:none">Checkbox is CHECKED!</p>
+<p id="text1" style="display:none">Checkbox is CHECKED!</p>
+<p id="text2" style="display:none">Checkbox is CHECKED!</p>
+<p id="text3" style="display:none">Checkbox is CHECKED!</p>
+<p id="text4" style="display:none">Checkbox is CHECKED!</p>
+<p id="text5" style="display:none">Checkbox is CHECKED!</p>
+<p id="text6" style="display:none">Checkbox is CHECKED!</p>
+<p id="text7" style="display:none">Checkbox is CHECKED!</p>
+
+
+    </div> 
+  
 
 
 
    <div class="navigate-btn-container">
        <button type="submit"  onclick="appendWelcome()" class="back">back</button>
-       <button type="submit" onclick="appendSecond()" class=" next">next</button>
+       <button type="submit" onclick="appendSecond()" class=" next">Start</button>
    </div>
    </div>
    </div>`
