@@ -942,6 +942,7 @@ body {
     font-display: swap;
     color: var(--black);
     margin-top: 30px;
+    text-align: justify;
 
 
 }
@@ -949,6 +950,8 @@ body {
 input[type=checkbox] {
     width: 30px;
     height: 30px;
+    transform: translateY(7px);
+    margin-right: 5px;
 }
 
 
@@ -999,15 +1002,17 @@ input[type=checkbox] {
 
 }
 
-.sanyi {
-    align-items: center;
-    display: flex;
-    height: 20px;
-}
+
 
 .column label {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
+}
+
+.row {
+    width: 200%;
+    margin: auto;
+    transform: translateX(-10%);
 }
 
 .row:after {
@@ -1088,6 +1093,8 @@ input[type=checkbox] {
 
 .table {
     margin-top: 40px;
+    width: 200%;
+    transform: translateX(-20%);
 }
 
 .tips {

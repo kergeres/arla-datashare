@@ -122,7 +122,7 @@ function appendFirst() {
    
    
     <div class="check">
-     <h1 class="cb">Before we start please tell us what are your most important goals, <br>
+     <h1 class="cb">Before we start please tell us what are your most important goals,
          so we can give you more tailored Tips and Tricks</h1>
          <div class="row">
              <div class="column">
@@ -294,6 +294,10 @@ function appendFourth() {
                         <tr>
                             <td onclick="appendSecond()">Self-sufficiency in feed</td>
                             <td>${six}</td>
+                        </tr> 
+                        <tr>
+                            <td>Co2 footprint"</td>
+                            <td>${footprintCalculated}</td>
                         </tr>
                     </tbody>
                 </table>
