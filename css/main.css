@@ -988,6 +988,12 @@ input[type=checkbox] {
 
 }
 
+.sanyi {
+    align-items: center;
+    display: flex;
+    height: 20px;
+}
+
 .column label {
     font-size: 15px;
     margin-bottom: 10px;
@@ -997,7 +1003,7 @@ input[type=checkbox] {
     content: "";
     display: table;
     clear: both;
-<<<<<<< HEAD
+    <<<<<<< HEAD
 }
 
 .start {
@@ -1009,65 +1015,68 @@ input[type=checkbox] {
     height: 30px;
     border-radius: 20px;
 }
+
 =======
-  }
+}
 
-  .start{
-      color: white;
-      background-color: var(--success);
-      font-size: 20px;
-      margin: 80px auto 0 auto;
-      width: 150px;
-      height: 30px;
-      border-radius: 20px;
-  }
+.start {
+    color: white;
+    background-color: var(--success);
+    font-size: 20px;
+    margin: 80px auto 0 auto;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+}
 
-  .hero{
-      width: 100%;
-      height: 100vh;
-      z-index: 1000;
-  }
+.hero {
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+}
 
-  .scroll-down{
-      position: absolute;
-      bottom: 12rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+.scroll-down {
+    position: absolute;
+    bottom: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  }
+}
 
-  .mouse{
-      width: 1rem;
-      height: 2.5rem;
-      border:2px solid white;
-      border-radius: 2rem;
-      margin-bottom: .5rem;
-      display: flex;
-  }
+.mouse {
+    width: 1rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+    margin-bottom: .5rem;
+    display: flex;
+}
 
-  .mouse span{
-      width: 0.8rem;
-      height: 0.8rem;
-      background-color: white;
-      display: block;
-      border-radius: 50%;
-      margin: auto;
-      animation: move-wheel 1s linear infinite;
-  }
+.mouse span {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-wheel 1s linear infinite;
+}
 
-  
-  
-  @keyframes move-wheel {
-      0%{
-          opacity: 0;
-          transform: translateY(-1rem);
-      }
-      100%{
+
+
+@keyframes move-wheel {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+
+    100% {
         opacity: 1;
         transform: translateY(1rem);
     }
-  }
->>>>>>> ec3d0af28f364002abc5e54e9e6f682fc42b29e1
+}
+
+>>>>>>>ec3d0af28f364002abc5e54e9e6f682fc42b29e1

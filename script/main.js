@@ -130,10 +130,10 @@ function appendFirst() {
          so we can give you more tailored Tips and Tricks</h1>
          <div class="row">
              <div class="column">
-                 <div style="align-content: center">
+                
                  <input type="checkbox" id="myCheck" onclick="myFunction()">
                  <label for="myCheck">Helping the environment</label>
-                 </div>
+                
                  <br>
                  <input type="checkbox" id="myCheck1" onclick="myFunction()">
                  <label for="myCheck">Having happy cows</label>
