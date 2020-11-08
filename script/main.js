@@ -305,8 +305,73 @@ container.onclick = e => {
 
 
 
+function myFunction() {
+  var checkBox1 = document.getElementById("myCheck");
+  var checkBox2 = document.getElementById("myCheck1");
+  var checkBox3 = document.getElementById("myCheck2");
+  var checkBox4 = document.getElementById("myCheck3");
+  var checkBox5 = document.getElementById("myCheck4");
+  var checkBox6= document.getElementById("myCheck5");
+  var checkBox7 = document.getElementById("myCheck6");
+  var checkBox8 = document.getElementById("myCheck3");
 
+  var text = document.getElementById("text");
+  if (checkBox4.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
 
+  var text = document.getElementById("text1");
+  if (checkBox1.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+  var text = document.getElementById("text2");
+  if (checkBox2.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+  var text = document.getElementById("text");
+  if (checkBox3.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+  var text = document.getElementById("text4");
+  if (checkBox5.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+  var text = document.getElementById("text5");
+  if (checkBox6.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+  var text = document.getElementById("text6");
+  if (checkBox7.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+  var text = document.getElementById("text7");
+  if (checkBox8.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  };
+
+}
 
 
 
