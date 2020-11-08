@@ -25,13 +25,87 @@ function string_validate(input) {
 
 function appendWelcome() {
   let htmltemplate = `
-   <div class="welcome-container">
-                <div class="welcome">
-                    <h1>Welcome to the data collecting process!</h1>
-                    <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
-                    <button onclick="appendFirst()" class="share">SHARE THE DATA</button>
-                </div>
-            </div>`;
+  
+  <section id="front">
+  
+  <div id="arla-background">
+  <div class="hero">
+  <a href="#slid" class="scroll-down">
+      <div class="mouse">
+         <span></span> 
+      </div>
+  </a>
+</div>
+      <div class="welcome">
+          <h1>Welcome to the data collecting process!</h1>
+          <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
+          <button onclick="appendFirst()" class="share">SHARE THE DATA</button>
+      </div>
+  </div>
+</section>
+<section id="slid" >
+  <div id="slider" class="carousel">
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <div id="slides">
+          <div id="overflow">
+              <div class="inner">
+                  <div class="slide slide_1">
+                      <div class="slide-content">
+                          <div class="blue-slide">
+                              <p class="slide-text">Here you can find quick guide which will help you to go
+                                  throught the process with
+                                  ease. You can also jump straight to it and we are sure you will do great
+                                  because
+                                  it's
+                                  very easy</p>
+                          </div>
+                          <div class="slide-photo">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="slide slide_2">
+                      <div class="slide-content">
+                          <div class="slide-photo-2"></div>
+                          <div class="gray-slide">
+                              <p class="slide-text">You will get 0,01 Euro more for kg of milk.
+                                  Our purpose is to help you save money, time and become more envitonment
+                                  friendly.
+                                  At the end you will get list of tips tailored especially for you!
+                                  They may help you to have better quality milk.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="slide slide_3">
+                      <div class="slide-content">
+                          <div class="pink-slide">
+                              <p class="slide-text">The more data you put the better tips you get.
+                                  If you do it on time you get a streak, which gives you some special bonuses.
+                                  Together we can make a difference and preserve natural ecosystems throughout
+                                  the
+                                  world.
+                              </p>
+                          </div>
+                          <div class="slide-photo-3">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="controls">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+          </div>
+          <div id="bullets">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+          </div>
+      </div>
+  </div>
+</section>`;
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 }
 let one = "";
