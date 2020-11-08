@@ -19,10 +19,6 @@ function string_validate(input) {
 
 }
 
-
-
-
-
 function appendWelcome() {
   let htmltemplate = `
   
@@ -320,8 +316,10 @@ function empty() {
 let _data = [];
 
 let footprintCalculated = 0;
+let random = 0;
 
 function footprintCalculation() {
+    
   footprintCalculated = (parseInt(one) + parseInt(two)) * 0 + (554);
   console.log(footprintCalculated);
 }
