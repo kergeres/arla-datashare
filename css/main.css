@@ -204,8 +204,6 @@ ul li {
 #datasharing {
     width: 100%;
     height: 100vh;
-    padding-top: 20px;
-
 }
 
 .processbar {
@@ -912,7 +910,7 @@ body {
     width: 100%;
 }
 
-.logo {
+.logo-2 {
     width: 100px;
     margin-left: 20px;
     margin-top: 20px;
@@ -932,7 +930,8 @@ body {
     font-size: 24px;
     font-weight: 300;
     font-style: normal;
-    font-display: swap
+    font-display: swap;
+    margin-top: 40px;
 }
 
 input[type=checkbox] {
@@ -1003,7 +1002,6 @@ input[type=checkbox] {
     content: "";
     display: table;
     clear: both;
-    <<<<<<< HEAD
 }
 
 .start {
@@ -1014,9 +1012,6 @@ input[type=checkbox] {
     width: 150px;
     height: 30px;
     border-radius: 20px;
-}
-
-=======
 }
 
 .start {
@@ -1079,4 +1074,8 @@ input[type=checkbox] {
     }
 }
 
->>>>>>>ec3d0af28f364002abc5e54e9e6f682fc42b29e1
+
+
+.table{
+    margin-top: 40px;
+}
