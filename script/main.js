@@ -312,7 +312,6 @@ function appendFourth() {
 }
 
 function appendTricks() {
-console.log("sziooooka");
   let htmltemplate = `
   <section id="tips">
   <header class="tips-header">
@@ -531,7 +530,8 @@ function appendChart() {
       },
       title: {
         display: true,
-        text: 'Carbon footprint for the whole farm'
+        text: 'Carbon footprint for the whole farm',
+        fontSize: 30
       }
     }
 
