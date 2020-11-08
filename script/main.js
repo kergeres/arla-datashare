@@ -299,7 +299,7 @@ function appendFourth() {
                 </table>
                 <div class="navigate-btn-container">
                   <button type="submit"  onclick="appendSecond()" class="back">Change</button>
-                  <button type="submit" onclick="appendChart(); empty()" class=" next">Send In</button>
+                  <button type="submit" onclick="appendChart(); empty()"  class=" next">Send In</button>
                </div>
                </div>
                </div>
@@ -372,6 +372,7 @@ function appendChart() {
   let data = prepareData(_data);
   //open the developer console to inspect the result
   console.log(data);
+  document.querySelector(".chart-container").style.display = "block";
   let chartContainer = document.getElementById('chartContainer');
   let chart = new Chart(chartContainer, {
     // The type of chart we want to create
