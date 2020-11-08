@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Arla - Datacollection for footprint measure.">
-    <link rel="shortcut icon" type="image/svg" href="image/arla_logo.png" />
+    <link rel="shortcut icon" type="image/svg" href="" />
     <meta name="robots" content="noindex" />
     <title>Arla - eco footprint</title>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
+
 <body onload="appendWelcome()">
     <header>
         <img src="img/arla_logo.png" class="logo">
@@ -19,84 +22,234 @@
                 <li>our sustainability</li>
             </ul>
         </nav>
+
     </header>
 
     <main>
-        <div id="arla-background">
-            <div class="welcome">
-                <h1>Welcome to the data collecting process!</h1>
-                <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
-                <button class="share">SHARE THE DATA</button>
+        <section id="front">
+            <div id="arla-background">
+                <div class="welcome">
+                    <h1>Welcome to the data collecting process!</h1>
+                    <h3>Help Arla and use its big data to accelerate<br> journey towards carbon net zero</h3>
+                    <button class="share">SHARE THE DATA</button>
+                </div>
             </div>
-        </div>
-        <div id="slider" class="carousel">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <div id="slides">
-                <div id="overflow">
-                    <div class="inner">
-                        <div class="slide slide_1">
-                            <div class="slide-content">
-                                <div class="blue-slide">
-                                    <p class="slide-text">Here you can find quick guide which will help you to go
-                                        throught the process with
-                                        ease. You can also jump straight to it and we are sure you will do great because
-                                        it's
-                                        very easy</p>
-                                </div>
-                                <div class="slide-photo">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide_2">
-                            <div class="slide-content">
-                                <div class="slide-photo-2"></div>
-                                <div class="gray-slide">
-                                    <p class="slide-text">You will get 0,01 Euro more for kg of milk.
-                                        Our purpose is to help you save money, time and become more envitonment
-                                        friendly.
-                                        At the end you will get list of tips tailored especially for you!
-                                        They may help you to have better quality milk.</p>
+            <div id="slider" class="carousel">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="inner">
+                            <div class="slide slide_1">
+                                <div class="slide-content">
+                                    <div class="blue-slide">
+                                        <p class="slide-text">Here you can find quick guide which will help you to go
+                                            throught the process with
+                                            ease. You can also jump straight to it and we are sure you will do great
+                                            because
+                                            it's
+                                            very easy</p>
+                                    </div>
+                                    <div class="slide-photo">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="slide slide_3">
-                            <div class="slide-content">
-                                <div class="pink-slide">
-                                    <p class="slide-text">The more data you put the better tips you get.
-                                        If you do it on time you get a streak, which gives you some special bonuses.
-                                        Together we can make a difference and preserve natural ecosystems throughout the
-                                        world.
-                                    </p>
+                            <div class="slide slide_2">
+                                <div class="slide-content">
+                                    <div class="slide-photo-2"></div>
+                                    <div class="gray-slide">
+                                        <p class="slide-text">You will get 0,01 Euro more for kg of milk.
+                                            Our purpose is to help you save money, time and become more envitonment
+                                            friendly.
+                                            At the end you will get list of tips tailored especially for you!
+                                            They may help you to have better quality milk.</p>
+                                    </div>
                                 </div>
-                                <div class="slide-photo-3">
+                            </div>
+                            <div class="slide slide_3">
+                                <div class="slide-content">
+                                    <div class="pink-slide">
+                                        <p class="slide-text">The more data you put the better tips you get.
+                                            If you do it on time you get a streak, which gives you some special bonuses.
+                                            Together we can make a difference and preserve natural ecosystems throughout
+                                            the
+                                            world.
+                                        </p>
+                                    </div>
+                                    <div class="slide-photo-3">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="controls">
-                    <label for="slide1">&#8249;</label>
-                    <label for="slide2">whaat</label>
-                    <label for="slide3">&#8250;</label>
-                </div>
-                <div id="bullets">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
+                    <div id="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                    <div id="bullets">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
                 </div>
             </div>
-          
-            <section id="datasharing">
-                <div class="input-container-big">
+        </section>
+
+        <!-- <section id="landing">
+
+    <div class="landing-first"></div>
+    <div class="landing-second-r"></div>
+    <div class="landing-second-l">Here you can find quick guide which will help you to go throught the process with ease. 
+        But you can jump straight to it and we are sure you will do great because it's very easy :)</div>
+    <div class="landing-third-r">You will get 0,01 Euro more for kg of milk.
+        Our purpose is to help you save money, time and become more envitonment friendly.
+        At the end you will get list of tips tailored especially for you!</div>
+    <div class="landing-third-l"></div>
+    <div class="landing-fourth-r"></div>
+    <div class="landing-fourth-l">We want to encourage you to improve so we made a leaderboard where the farms with lowest C02 emmiston will be awarded.
+        If you don't want your score to be sharded it's not mandatory.</div>
+        <div class="end">
+            <h3>start data sharing</h3>
+
+        </div>
+</section> -->
+
+        <section id="datasharing">
+            <div class="input-container-big">
+
+
+            </div>
+        </section>
+
+        <div class="chart-container">
+            <canvas id="chartContainer"></canvas>
+        </div>
+
+        <section id="tips">
+            <header class="tips-header">
+                <img src="img/arla_logo.png" class="logo">
+                <img src="img/cloud.png" class="cloud">
+                <nav>
+                    <ul class="menu-2">
+                        <li>tips and tricks</li>
+                        <li>news</li>
+                        <li>contact</li>
+                        <li>our sustainability</li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="heading">
+                <h1 class="green-header">TIPS & TRICKS</h1>
+                <h4>This advices are given based on data that you gave us, they may be very useful</h4>
+            </div>
+            <div id="slider2" class="carousel2">
+                <input type="radio" name="slider2" id="slide12" checked>
+                <input type="radio" name="slider2" id="slide22">
+                <input type="radio" name="slider2" id="slide32">
+                <input type="radio" name="slider2" id="slide42">
+                <div id="slides2">
+                    <div id="overflow2">
+                        <div class="inner2">
+                            <div class="slide2 slide_12">
+                                <div class="slide-content2">
+                                    <div class="blue-slide2">
+                                        <p class="slide-text2">Physical Activity of cows is very important to keep them
+                                            healthy and increase dairy production.
+                                            Try to give the cows a little push in the morning and give them hay to get
+                                            warm.
+                                            There should be a separate shelter room for pregnant cows with continuous
+                                            availability of food and water.
+                                        </p>
+                                    </div>
+                                    <div class="slide-photo2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide2 slide_22">
+                                <div class="slide-content2">
+                                    <div class="slide-photo-22"></div>
+                                    <div class="gray-slide2">
+                                        <p class="slide-text2">The application of manures to fields can make significant
+                                            differences to N2O losses.
+                                            Slurry applied in the spring can result in up to 50% less N2O being emitted.
+                                            By using a trailing shoe or injecting, further reductions will be obtained
+                                            as the slurry is placed directly onto the
+                                            soil, unlike traditional spreading.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide2 slide_32">
+                                <div class="slide-content2">
+                                    <div class="pink-slide2">
+                                        <p class="slide-text2">Unimpaired field drainage, modern grass varieties and
+                                            timely field operations present opportunities to increase forage
+                                            quality without necessarily compromising yield.
+                                            Improved forage quality will encourage intakes, promoting milk yield or
+                                            off-set purchased feed use.
+                                        </p>
+                                    </div>
+                                    <div class="slide-photo-32">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide2 slide_42">
+                                <div class="slide-content2">
+                                    <div class="pink-slide2">
+                                        <p class="slide-text2">Unimpaired field drainage, modern grass varieties and
+                                            timely field operations present opportunities to increase forage
+                                            quality without necessarily compromising yield.
+                                            Improved forage quality will encourage intakes, promoting milk yield or
+                                            off-set purchased feed use.
+                                        </p>
+                                    </div>
+                                    <div class="slide-photo-32">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls2">
+                        <label for="slide12"></label>
+                        <label for="slide22"></label>
+                        <label for="slide32"></label>
+                        <label for="slide42"></label>
+                    </div>
+                    <div id="bullets2">
+                        <label for="slide12"></label>
+                        <label for="slide22"></label>
+                        <label for="slide32"></label>
+                        <label for="slide42"></label>
+                    </div>
                 </div>
-            </section>
-            <section id="chart-section">
-                <div class="chart-container">
-                <canvas id="chartContainer"></canvas>
+            </div>
+            <div class="feedback">
+                <h1 class="green-header">GIVE US FEEDBACK</h1>
+                <h4>How was the experience?</h4>
+                <div class="stars">
+                    <ul class="rating">
+                        <li class="rating-item" data-rate="1"></li>
+                        <li class="rating-item active" data-rate="2"></li>
+                        <li class="rating-item" data-rate="3"></li>
+                        <li class="rating-item" data-rate="4"></li>
+                        <li class="rating-item" data-rate="5"></li>
+                    </ul>
                 </div>
-            </section>
+                <h1 class="comment">Comment:</h1>
+                <textarea class="comment-area" placeholder="type here...">
+                    </textarea>
+                <button class="submit">SUBMIT</button>
+            </div>
+            <div class="footer">
+                <img src="img/arla_logo.png" class="logo">
+                <img src="img/cloud.png" class="cloud">
+            </div>
+
+        </section>
+
+
     </main>
 
 
@@ -105,4 +258,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
 </body>
+
 </html>
