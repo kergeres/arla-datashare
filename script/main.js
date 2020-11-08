@@ -192,7 +192,7 @@ function appendSecond() {
    <img src="img/progress2.svg" class="processbar"></img>
    <div class="input-small-container">
        <h4>Kg dry matter per cow</h4>
-       <p>Enter the amount of feed consumption per cow.</p>
+       <p>Enter the amount of feed consumption.</p>
        <input id="ifirst" required value="${one}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
 
@@ -269,7 +269,7 @@ function appendFourth() {
    <div class="bg-input-container">
    <div class="input-container">
    <img src="img/progress4.svg" class="processbar"></img>
-   <table>
+   <table class="table">
                     <tbody>
                         <tr>
                             <td onclick="appendSecond()">Feed consumption</td>
@@ -319,7 +319,7 @@ let footprintCalculated = 0;
 let random = 0;
 
 function footprintCalculation() {
-    
+
   footprintCalculated = (parseInt(one) + parseInt(two)) * 0 + (554);
   console.log(footprintCalculated);
 }
@@ -432,64 +432,64 @@ function myFunction() {
   var checkBox3 = document.getElementById("myCheck2");
   var checkBox4 = document.getElementById("myCheck3");
   var checkBox5 = document.getElementById("myCheck4");
-  var checkBox6= document.getElementById("myCheck5");
+  var checkBox6 = document.getElementById("myCheck5");
   var checkBox7 = document.getElementById("myCheck6");
   var checkBox8 = document.getElementById("myCheck3");
 
   var text = document.getElementById("text");
-  if (checkBox4.checked == true){
+  if (checkBox4.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text1");
-  if (checkBox1.checked == true){
+  if (checkBox1.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text2");
-  if (checkBox2.checked == true){
+  if (checkBox2.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text");
-  if (checkBox3.checked == true){
+  if (checkBox3.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text4");
-  if (checkBox5.checked == true){
+  if (checkBox5.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text5");
-  if (checkBox6.checked == true){
+  if (checkBox6.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text6");
-  if (checkBox7.checked == true){
+  if (checkBox7.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
   var text = document.getElementById("text7");
-  if (checkBox8.checked == true){
+  if (checkBox8.checked == true) {
     text.style.display = "block";
   } else {
-     text.style.display = "none";
+    text.style.display = "none";
   };
 
 }
