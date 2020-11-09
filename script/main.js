@@ -712,6 +712,7 @@ function myFunction() {
 
 }
 
+//function for the topnav- if classname has equal value and equal type then it has to be responsive
 function myFunc() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
