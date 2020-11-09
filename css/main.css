@@ -944,7 +944,7 @@ body {
     margin-top: 30px;
     text-align: justify;
 width: 570px;
-margin-left: -60px;
+transform: translateX(-15%);
 
 }
 
@@ -1013,8 +1013,7 @@ input[type=checkbox] {
 .row {
     width: 200%;
     margin: auto;
-    transform: translate(-10%, -8%);
-
+    transform: translateX(-15%);
 }
 
 .row:after {
@@ -1101,15 +1100,19 @@ input[type=checkbox] {
 
 .tips {
     height: 80px;
-    width: 200px;
+    width: 250px;
     margin-top: 50px;
     border: none;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    color: white;
+    color: var(--dark_gray);
     text-transform: uppercase;
-    background-color: var(--dark_gray);
+    border: solid 5px var(--dark_gray);
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-weight: 700;
 }
 
 .advices{
