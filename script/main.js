@@ -4,14 +4,14 @@ function string_validate(input) {
 
   let inputval = input.value;
 
- //incorrect datatype
+  //incorrect datatype
   if (isNaN(inputval)) {
 
     input.style.borderColor = "red"
   }
-   //empty inputfield
+  //empty inputfield
   else if (inputval == "") {
-  
+
     input.style.borderColor = "black"
   }
   //correct datatype
@@ -42,17 +42,18 @@ function appendWelcome() {
       </div>
   </div>
 </section>
-<section id="slid" >
-  <div id="slider" class="carousel">
-      <input type="radio" name="slider" id="slide1" checked>
-      <input type="radio" name="slider" id="slide2">
-      <input type="radio" name="slider" id="slide3">
-      <div id="slides">
-          <div id="overflow">
-              <div class="inner">
-                  <div class="slide slide_1">
-                      <div class="slide-content">
-                          <div class="blue-slide">
+<section id="slid">
+<div id="slider">
+   <input type="radio" name="slider" id="slide1" checked>
+   <input type="radio" name="slider" id="slide2">
+   <input type="radio" name="slider" id="slide3">
+   <input type="radio" name="slider" id="slide4">
+   <div id="slides">
+      <div id="overflow">
+         <div class="inner">
+            <div class="slide slide_1">
+               <div class="slide-content">
+                  <div class="blue-slide">
                               <p class="slide-text">Here you can find quick guide which will help you to go
                                   throught the process with
                                   ease. You can also jump straight to it and we are sure you will do great
@@ -62,11 +63,11 @@ function appendWelcome() {
                           </div>
                           <div class="slide-photo">
                           </div>
-                      </div>
-                  </div>
-                  <div class="slide slide_2">
-                      <div class="slide-content">
-                          <div class="slide-photo-2"></div>
+               </div>
+            </div>
+            <div class="slide slide_2">
+               <div class="slide-content">
+                  <div class="slide-photo-2"></div>
                           <div class="gray-slide">
                               <p class="slide-text">You will get 0,01 Euro more for kg of milk.
                                   Our purpose is to help you save money, time and become more envitonment
@@ -74,11 +75,11 @@ function appendWelcome() {
                                   At the end you will get list of tips tailored especially for you!
                                   They may help you to have better quality milk.</p>
                           </div>
-                      </div>
-                  </div>
-                  <div class="slide slide_3">
-                      <div class="slide-content">
-                          <div class="pink-slide">
+               </div>
+            </div>
+            <div class="slide slide_3">
+               <div class="slide-content">
+                  <div class="pink-slide">
                               <p class="slide-text">The more data you put the better tips you get.
                                   If you do it on time you get a streak, which gives you some special bonuses.
                                   Together we can make a difference and preserve natural ecosystems throughout
@@ -86,24 +87,36 @@ function appendWelcome() {
                                   world.
                               </p>
                           </div>
-                          <div class="slide-photo-3">
+                          <div class="slide-photo-3"></div>
+               </div>
+            </div>
+            <div class="slide slide_4">
+               <div class="slide-content">
+                  <div class="green-slide">
+                              <p class="slide-text">We are constanty improving our platform to guarantee the best and efortless experience for you. 
+                              At the end you can share your oppinion and let us know if you had any difficulties. 
+                              In the future all the data will be collected from various sensors.</p>
                           </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div id="controls">
-              <label for="slide1"></label>
-              <label for="slide2"></label>
-              <label for="slide3"></label>
-          </div>
-          <div id="bullets">
-              <label for="slide1"></label>
-              <label for="slide2"></label>
-              <label for="slide3"></label>
-          </div>
+                          <div class="slide-photo-4">
+                          </div>
+               </div>
+            </div>
+         </div>
       </div>
-  </div>
+   </div>
+   <div id="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+   <div id="bullets">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+</div>
 </section>`;
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 }
@@ -211,7 +224,7 @@ function appendSecond() {
    </div>
    </div>
    </div>`;
-   //  buttons above navigate between the separated spa "sites'
+  //  buttons above navigate between the separated spa "sites'
 
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 
@@ -254,15 +267,13 @@ function appendThird() {
    </div>
    </div>
    `;
-   //  buttons above navigate between the separated spa "sites'
+  //  buttons above navigate between the separated spa "sites'
 
   // the if statement is to check if all of the inputfields were filled out
-  if(one>0 && two > 0 && three > 0)
-  {
-  document.querySelector(".input-container-big").innerHTML = htmltemplate;
+  if (one > 0 && two > 0 && three > 0) {
+    document.querySelector(".input-container-big").innerHTML = htmltemplate;
   }
-  else
-  {
+  else {
     appendSecond();
   }
 }
@@ -317,18 +328,16 @@ function appendFourth() {
                </div>
                </div>
                `;
-      //  buttons above navigate between the separated spa "sites'
+  //  buttons above navigate between the separated spa "sites'
 
-      // the if statement is to check if all of the inputfields were filled out
-    if(four>0 && five > 0 && six > 0)
-    {
-      document.querySelector(".input-container-big").innerHTML = data;
-    }
+  // the if statement is to check if all of the inputfields were filled out
+  if (four > 0 && five > 0 && six > 0) {
+    document.querySelector(".input-container-big").innerHTML = data;
+  }
 
-    else
-    {
-      appendThird();
-    }
+  else {
+    appendThird();
+  }
 }
 
 // navigate to tips and trick 
@@ -353,17 +362,17 @@ function appendTricks() {
       <h1 class="green-header">TIPS & TRICKS</h1>
       <h4 class="advices">This advices are given based on data that you gave us, they may be very useful</h4>
   </div>
-  <div id="slider2" class="carousel2">
-      <input type="radio" name="slider2" id="slide12" checked>
-      <input type="radio" name="slider2" id="slide22">
-      <input type="radio" name="slider2" id="slide32">
-      <input type="radio" name="slider2" id="slide42">
-      <div id="slides2">
-          <div id="overflow2">
-              <div class="inner2">
-                  <div class="slide2 slide_12">
-                      <div class="slide-content2">
-                          <div class="blue-slide2">
+  <div id="slider">
+   <input type="radio" name="slider" id="slide1" checked>
+   <input type="radio" name="slider" id="slide2">
+   <input type="radio" name="slider" id="slide3">
+   <input type="radio" name="slider" id="slide4">
+   <div id="slides">
+      <div id="overflow">
+         <div class="inner">
+            <div class="slide slide_1">
+               <div class="slide-content">
+                  <div class="blue-slide2">
                               <p class="slide-text2">Physical Activity of cows is very important to keep them
                                   healthy and increase dairy production.
                                   Try to give the cows a little push in the morning and give them hay to get
@@ -374,11 +383,11 @@ function appendTricks() {
                           </div>
                           <div class="slide-photo2">
                           </div>
-                      </div>
-                  </div>
-                  <div class="slide2 slide_22">
-                      <div class="slide-content2">
-                          <div class="slide-photo-22"></div>
+               </div>
+            </div>
+            <div class="slide slide_2">
+               <div class="slide-content">
+                  <div class="slide-photo-22"></div>
                           <div class="gray-slide2">
                               <p class="slide-text2">The application of manures to fields can make significant
                                   differences to N2O losses.
@@ -387,11 +396,11 @@ function appendTricks() {
                                   as the slurry is placed directly onto the
                                   soil, unlike traditional spreading.</p>
                           </div>
-                      </div>
-                  </div>
-                  <div class="slide2 slide_32">
-                      <div class="slide-content2">
-                          <div class="pink-slide2">
+               </div>
+            </div>
+            <div class="slide slide_3">
+               <div class="slide-content">
+                  <div class="pink-slide2">
                               <p class="slide-text2">Unimpaired field drainage, modern grass varieties and
                                   timely field operations present opportunities to increase forage
                                   quality without necessarily compromising yield.
@@ -401,11 +410,11 @@ function appendTricks() {
                           </div>
                           <div class="slide-photo-32">
                           </div>
-                      </div>
-                  </div>
-                  <div class="slide2 slide_42">
-                      <div class="slide-content2">
-                          <div class="pink-slide2">
+               </div>
+            </div>
+            <div class="slide slide_4">
+               <div class="slide-content">
+                  <div class="green-slide">
                               <p class="slide-text2">Unimpaired field drainage, modern grass varieties and
                                   timely field operations present opportunities to increase forage
                                   quality without necessarily compromising yield.
@@ -415,8 +424,24 @@ function appendTricks() {
                           </div>
                           <div class="slide-photo-32">
                           </div>
-                      </div>
-                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+   <div id="bullets">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+</div>
               </div>
           </div>
           <div id="controls2">
@@ -473,7 +498,7 @@ function empty() {
 function footprintCalculation() {
 
   footprintCalculated = Math.floor(Math.random() * (554 + 1 - 500)) + 500;
- 
+
 }
 
 
