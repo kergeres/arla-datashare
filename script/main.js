@@ -1,6 +1,7 @@
+// validation for the input fields. gives the right border color depends on datatype
+// --David Papp
 function string_validate(input) {
 
-  // let input = document.querySelector(".input-field");
   let inputval = input.value;
 
 
@@ -19,6 +20,8 @@ function string_validate(input) {
 
 }
 
+// Append the welcoming page for onload
+// -- David Papp
 function appendWelcome() {
   let htmltemplate = `
   
@@ -104,6 +107,8 @@ function appendWelcome() {
 </section>`;
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 }
+// variables for input fields value
+// --David Papp
 let one = "";
 let two = "";
 let three = "";
@@ -112,7 +117,7 @@ let five = "";
 let six = "";
 
 // the following 4 function is made for display the form
-
+// --David Papp
 function appendFirst() {
 
   let htmltemplate = `  
@@ -173,6 +178,7 @@ function appendFirst() {
 
 }
 
+// --David Papp
 function appendSecond() {
 
   let htmltemplate = ` 
@@ -208,6 +214,8 @@ function appendSecond() {
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 
 }
+
+// --David Papp
 function appendThird() {
   one = document.querySelector("#ifirst").value;
   two = document.querySelector("#isecond").value;
@@ -256,6 +264,7 @@ else
 
 }
 
+// --David Papp
 function appendFourth() {
   four = document.querySelector("#ifourth").value;
   five = document.querySelector("#ififth").value;
@@ -317,6 +326,8 @@ else
 }
 }
 
+// navigate to tips and trick 
+// --David Papp
 function appendTricks() {
   let htmltemplate = `
   <section id="tips">
@@ -442,25 +453,31 @@ function appendTricks() {
 </section>`;
   document.querySelector("body").innerHTML = htmltemplate;
 }
+
+// empty is closes the inputfield container and "gives space" for the chart
+// --David Papp
 function empty() {
   let empty = ""
   document.querySelector(".input-container-big").innerHTML = empty;
   document.querySelector("#datasharing").style.display = "none"
 }
-// 1: data
-// Array of objects
-let _data = [];
-
-let footprintCalculated = 554;
 
 
-
+// not real calculation (because we do not know the formula) for the co2 
+// --David papp
 function footprintCalculation() {
 
   footprintCalculated = Math.floor(Math.random() * (554 + 1 - 500)) + 500;
  
 }
 
+
+// the 3 steps to display the chart
+//--Georgiana Sabau
+
+// Array of objects
+let _data = [];
+let footprintCalculated = 554;
 
 
 async function getData() {
@@ -477,14 +494,8 @@ async function getData() {
   console.log(_data);
 };
 
-
-
-
-
-
 // 2: prepare data for chart
-// seperating the objects to arrays: dates and infected
-// why? that's how chart.js reads the data :)
+//--Georgiana Sabau
 function prepareData(data) {
   // declaring two array to store the data 
   let dates = [];
@@ -504,6 +515,7 @@ function prepareData(data) {
 }
 
 // 3: create and append the chart
+//--Georgiana Sabau
 function appendChart() {
   // using prepareData() to get the excact data we want
   let data = prepareData(_data);
@@ -547,7 +559,7 @@ function appendChart() {
   );
 }
 
-// review //
+
 const container = document.querySelector('.rating');
 const items = container.querySelectorAll('.rating-item')
 container.onclick = e => {
