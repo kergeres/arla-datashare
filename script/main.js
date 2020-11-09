@@ -520,6 +520,7 @@ function appendTricks() {
 
 </section>`;
   document.querySelector("body").innerHTML = htmltemplate;
+  callItTheRightime();
 }
 
 // empty is closes the inputfield container and "gives space" for the chart
@@ -559,7 +560,7 @@ async function getData() {
   };
 
   _data.push(newCo);
-  console.log(_data);
+  
 };
 
 // 2: prepare data for chart
@@ -587,8 +588,7 @@ function prepareData(data) {
 function appendChart() {
   // using prepareData() to get the excact data we want
   let data = prepareData(_data);
-  //open the developer console to inspect the result
-  console.log(data);
+ 
   document.querySelector(".chart-container").style.display = "block";
   let chartContainer = document.getElementById('chartContainer');
   let chart = new Chart(chartContainer, {
@@ -627,9 +627,12 @@ function appendChart() {
   );
 }
 
+function callItTheRightime()
+{
+  const container = document.querySelector('.rating');
+  const items = container.querySelectorAll('.rating-item');
 
-const container = document.querySelector('.rating');
-const items = container.querySelectorAll('.rating-item');
+
 container.onclick = e => {
   const elClass = e.target.classList;
   // change the rating if the user clicks on a different star
@@ -637,10 +640,11 @@ container.onclick = e => {
     items.forEach( // reset the active class on the star
       item => item.classList.remove('active')
     );
-    console.log(e.target.getAttribute("data-rate"));
+    // console.log(e.target.getAttribute("data-rate"));
     elClass.add('active'); // add active class to the clicked star
   }
 };
+}
 
 
 
