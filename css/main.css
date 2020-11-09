@@ -844,7 +844,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0px 50px;
-        font-size: 20pt;
+    font-size: 20pt;
 }
 
 /* review */
@@ -900,6 +900,7 @@ body {
     width: 40%;
     height: 150px;
     margin: 30px;
+    padding-top: 30px;
 }
 
 .submit {
@@ -943,8 +944,8 @@ body {
     color: var(--black);
     margin-top: 30px;
     text-align: justify;
-width: 570px;
-transform: translateX(-15%);
+    width: 570px;
+    transform: translateX(-15%);
 
 }
 
@@ -1115,8 +1116,8 @@ input[type=checkbox] {
     font-weight: 700;
 }
 
-.advices{
-text-align: center;
-margin-bottom: 50px;
+.advices {
+    text-align: center;
+    margin-bottom: 50px;
 
 }

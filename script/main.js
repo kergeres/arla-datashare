@@ -294,7 +294,7 @@ function appendFourth() {
                         </tr> 
                         <tr>
                             <td>Co2 footprint"</td>
-                            <td>${footprintCalculated + 554}</td>
+                            <td><b>${footprintCalculated}</b></td>
                         </tr>
                     </tbody>
                 </table>
@@ -451,13 +451,13 @@ function empty() {
 // Array of objects
 let _data = [];
 
-let footprintCalculated = Math.floor(Math.random() * (554 + 1 - 500)) + 500 ;
-console.log(footprintCalculated);
+let footprintCalculated = 554;
+
 
 
 function footprintCalculation() {
 
-  footprintCalculated = footprintCalculated;
+  footprintCalculated = Math.floor(Math.random() * (554 + 1 - 500)) + 500;
  
 }
 
