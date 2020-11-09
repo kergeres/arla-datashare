@@ -661,6 +661,7 @@ body {
     color: #434343;
 }
 
+
 .gray-slide {
     width: 57%;
     background-color: #575757;
@@ -900,7 +901,7 @@ body {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     /* For mobile phones: */
     [class*="col-"] {
       width: 100%;
@@ -1101,9 +1102,8 @@ input[type=checkbox] {
 #content-desktop {display: block;}
 #content-mobile {display: none;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
 #content-desktop {display: none;}
 #content-mobile {display: block;}
-
 }

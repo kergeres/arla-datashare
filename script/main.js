@@ -152,7 +152,7 @@ function appendFirst() {
                 
                  <br>
                  <input type="checkbox" id="myCheck1" onclick="myFunction()">
-                 <label for="myCheck">Having satisfied cows</label>
+                 <label for="myCheck">Having happy cows</label>
                  <br>                 
                  <input type="checkbox" id="myCheck2" onclick="myFunction()">
                  <label for="myCheck">Spending less time in work</label>
@@ -238,19 +238,19 @@ function appendSecond() {
    <div class="input-small-container">
        <h4>Kg dry matter per cow</h4>
        <p>Enter the amount of feed consumption.</p>
-       <input id="ifirst" value="${one}" class="input-field" placeholder="kg" onkeyup="string_validate(this)"/>
+       <input id="ifirst" value="${one}" class="input-field" placeholder="test" onkeyup="string_validate(this)"/>
       
    </div>
 
     <div class="input-small-container">
        <h4>Kg milk pr year-cow</h4>
        <p>Enter the amount of the milk production in kg for the current year.</p>
-       <input id="isecond" value="${two}" class="input-field" placeholder="kg" onkeyup="string_validate(this)">
+       <input id="isecond" value="${two}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
     <div class="input-small-container">
        <h4>Nr. of cows</h4>
        <p>Enter the amount of cows you have right now.</p>
-       <input id="ithird" value="${three}" class="input-field" placeholder="nr" onkeyup="string_validate(this)">
+       <input id="ithird" value="${three}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
 
    <div class="navigate-btn-container">
@@ -278,18 +278,18 @@ function appendThird() {
    <div class="input-small-container">
        <h4>Diesel litre</h4>
        <p>Enter the amount of fuel used for whole farm.</p>
-       <input id="ifourth" value="${four}" class="input-field" placeholder="l" onkeyup="string_validate(this)">
+       <input id="ifourth" value="${four}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
 
     <div class="input-small-container">
        <h4>Electricity kWh</h4>
        <p>Enter the amount of electricity you have used for your farm.</p>
-       <input  id="ififth" value="${five}" class="input-field" placeholder="kwh" onkeyup="string_validate(this)">
+       <input  id="ififth" value="${five}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
     <div class="input-small-container">
        <h4>Self-sufficiency in feed</h4>
        <p>% of dry matter</p>
-       <input id="isixth"  value="${six}" class="input-field" placeholder="%" onkeyup="string_validate(this)">
+       <input id="isixth"  value="${six}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
 
 
@@ -351,8 +351,8 @@ function appendFourth() {
                             <td>${six}</td>
                         </tr> 
                         <tr>
-                            <td><u>Co2 footprint"</u></td>
-                            <td><u>${footprintCalculated}</u></td>
+                            <td>Co2 footprint"</td>
+                            <td><b>${footprintCalculated}</b></td>
                         </tr>
                     </tbody>
                 </table>
@@ -709,13 +709,13 @@ function myFunction() {
 
 }
 
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-      x.className += " responsive";
-  } else {
-      x.className = "topnav";
-  }
+function myFunc() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }
 
 
