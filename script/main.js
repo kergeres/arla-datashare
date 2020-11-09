@@ -390,8 +390,8 @@ function appendTricks() {
       <nav>
           <ul class="menu-2">
               <li>news</li>
-              <li>contact</li>
-              <li>our sustainability</li>
+              <li><a href="https://www.arla.com/company/contact/" style="text-decoration: none; color: #fff">CONTACT</a></li>
+              <li><a href="https://www.arla.com/sustainability/" style="text-decoration: none; color: #fff">OUR SUSTAINABILITY</a></li>
           </ul>
       </nav>
   </header>
