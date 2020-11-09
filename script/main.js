@@ -140,7 +140,7 @@ function appendFirst() {
    <div class="input-container">
    <img src="img/progress1.svg" class="processbar"></img>
    
-   
+   <div id="content-desktop">
     <div class="check">
      <h1 class="cb">Before we start please tell us what are your most important goals,
          so we can give you more tailored Tips and Tricks</h1>
@@ -177,7 +177,42 @@ function appendFirst() {
 
 
     </div> 
-  
+  </div>
+
+  <div id="content-mobile">
+    <div class="check">
+     <h1 class="cb">Before we start please tell us what are your most important goals,
+         so we can give you more tailored Tips and Tricks</h1>
+         
+                
+                 <input type="checkbox" id="myCheck" onclick="myFunction()">
+                 <label for="myCheck">Helping the environment</label>
+                
+                 <br>
+                 <input type="checkbox" id="myCheck1" onclick="myFunction()">
+                 <label for="myCheck">Having happy cows</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck2" onclick="myFunction()">
+                 <label for="myCheck">Spending less time in work</label>
+                 <br>
+                 <input type="checkbox" id="myCheck3" onclick="myFunction()">
+                 <label for="myCheck">Reducing N2O loses</label>
+                 <br>
+                 <input type="checkbox" id="myCheck4" onclick="myFunction()">
+                 <label for="myCheck">Saving money</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck5" onclick="myFunction()">
+                 <label for="myCheck">Making my work easier</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck6" onclick="myFunction()">
+                 <label for="myCheck">Producing more crops</label>
+                 <br>                 
+                 <input type="checkbox" id="myCheck7" onclick="myFunction()">
+                 <label for="myCheck">Having more cows</label>
+
+
+    </div> 
+
 
 
 
@@ -672,6 +707,15 @@ function myFunction() {
     text.style.display = "none";
   };
 
+}
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+      x.className += " responsive";
+  } else {
+      x.className = "topnav";
+  }
 }
 
 
