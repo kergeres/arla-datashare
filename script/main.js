@@ -193,7 +193,8 @@ function appendSecond() {
    <div class="input-small-container">
        <h4>Kg dry matter per cow</h4>
        <p>Enter the amount of feed consumption.</p>
-       <input id="ifirst" required value="${one}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
+       <input id="ifirst" value="${one}" class="input-field" placeholder="test" onkeyup="string_validate(this)"/>
+      
    </div>
 
     <div class="input-small-container">
@@ -206,7 +207,6 @@ function appendSecond() {
        <p>Enter the amount of cows you have right now.</p>
        <input id="ithird" value="${three}" class="input-field" placeholder="test" onkeyup="string_validate(this)">
    </div>
-
 
    <div class="navigate-btn-container">
        <button type="submit" onclick="appendFirst()" class="back">back</button>
@@ -254,8 +254,16 @@ function appendThird() {
    </div>
    </div>
    `;
-
+if(one>0 && two > 0 && three > 0)
+{
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
+}
+
+else
+{
+  appendSecond();
+}
+  
 
 }
 
@@ -297,7 +305,7 @@ function appendFourth() {
                         </tr> 
                         <tr>
                             <td>Co2 footprint"</td>
-                            <td>${footprintCalculated}</td>
+                            <td>${footprintCalculated + 554}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -308,7 +316,16 @@ function appendFourth() {
                </div>
                </div>
                `;
+  
+  if(four>0 && five > 0 && six > 0)
+{
   document.querySelector(".input-container-big").innerHTML = data;
+}
+
+else
+{
+  appendThird();
+}
 }
 
 function appendTricks() {
@@ -445,13 +462,14 @@ function empty() {
 // Array of objects
 let _data = [];
 
-let footprintCalculated = 0;
-let random = 0;
+let footprintCalculated = Math.floor(Math.random() * 554) + 500 ;
+console.log(footprintCalculated);
+
 
 function footprintCalculation() {
 
-  footprintCalculated = (parseInt(one) + parseInt(two)) * 0 + (554);
-  console.log(footprintCalculated);
+  footprintCalculated = footprintCalculated + 1;
+ 
 }
 
 

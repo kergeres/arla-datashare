@@ -1012,7 +1012,8 @@ input[type=checkbox] {
 .row {
     width: 200%;
     margin: auto;
-    transform: translateX(-10%);
+    transform: translate(-10%, -8%);
+
 }
 
 .row:after {
