@@ -217,7 +217,8 @@ function appendFirst() {
     </div> 
 
 
-
+<br>
+<br>
 
    <div class="navigate-btn-container">
        <button type="submit"  onclick="appendWelcome()" class="back">back</button>
@@ -388,7 +389,6 @@ function appendTricks() {
       <img src="img/cloud.png" class="cloud">
       <nav>
           <ul class="menu-2">
-              <li>tips and tricks</li>
               <li>news</li>
               <li>contact</li>
               <li>our sustainability</li>
