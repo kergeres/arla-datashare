@@ -315,7 +315,7 @@ function appendTricks() {
   let htmltemplate = `
   <section id="tips">
   <header class="tips-header">
-      <img src="img/arla_logo.png" class="logo">
+      <img src="img/arla_logo.png" class="logo-2">
       <img src="img/cloud.png" class="cloud">
       <nav>
           <ul class="menu-2">
@@ -329,7 +329,7 @@ function appendTricks() {
 
   <div class="heading">
       <h1 class="green-header">TIPS & TRICKS</h1>
-      <h4>This advices are given based on data that you gave us, they may be very useful</h4>
+      <h4 class="advices">This advices are given based on data that you gave us, they may be very useful</h4>
   </div>
   <div id="slider2" class="carousel2">
       <input type="radio" name="slider2" id="slide12" checked>
@@ -429,7 +429,7 @@ function appendTricks() {
       <button class="submit">SUBMIT</button>
   </div>
   <div class="footer">
-      <img src="img/arla_logo.png" class="logo">
+      <img src="img/arla_logo.png" class="logo-2">
       <img src="img/cloud.png" class="cloud">
   </div>
 
