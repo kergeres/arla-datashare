@@ -4,29 +4,29 @@ function string_validate(input) {
 
   let inputval = input.value;
 
-
+ //incorrect datatype
   if (isNaN(inputval)) {
-    console.log('ja, it is a string');
+
     input.style.borderColor = "red"
   }
+   //empty inputfield
   else if (inputval == "") {
-    console.log("ures");
+  
     input.style.borderColor = "black"
   }
+  //correct datatype
   else {
-    console.log('this is a number');
     input.style.borderColor = "green"
   }
 
 }
 
+
 // Append the welcoming page for onload
 // -- David Papp
 function appendWelcome() {
   let htmltemplate = `
-  
   <section id="front">
-  
   <div id="arla-background">
   <div class="hero">
   <a href="#slid" class="scroll-down">
@@ -107,14 +107,16 @@ function appendWelcome() {
 </section>`;
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 }
+
+
 // variables for input fields value
-// --David Papp
 let one = "";
 let two = "";
 let three = "";
 let four = "";
 let five = "";
 let six = "";
+
 
 // the following 4 function is made for display the form
 // --David Papp
@@ -208,8 +210,8 @@ function appendSecond() {
        <button type="submit" onclick="appendThird()" class=" next">next</button>
    </div>
    </div>
-   </div>`
-    ;
+   </div>`;
+   //  buttons above navigate between the separated spa "sites'
 
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
 
@@ -217,6 +219,7 @@ function appendSecond() {
 
 // --David Papp
 function appendThird() {
+  // store the first 3 inputfield value to the global variables
   one = document.querySelector("#ifirst").value;
   two = document.querySelector("#isecond").value;
   three = document.querySelector("#ithird").value;
@@ -251,17 +254,17 @@ function appendThird() {
    </div>
    </div>
    `;
-if(one>0 && two > 0 && three > 0)
-{
+   //  buttons above navigate between the separated spa "sites'
+
+  // the if statement is to check if all of the inputfields were filled out
+  if(one>0 && two > 0 && three > 0)
+  {
   document.querySelector(".input-container-big").innerHTML = htmltemplate;
-}
-
-else
-{
-  appendSecond();
-}
-  
-
+  }
+  else
+  {
+    appendSecond();
+  }
 }
 
 // --David Papp
@@ -314,16 +317,18 @@ function appendFourth() {
                </div>
                </div>
                `;
-  
-  if(four>0 && five > 0 && six > 0)
-{
-  document.querySelector(".input-container-big").innerHTML = data;
-}
+      //  buttons above navigate between the separated spa "sites'
 
-else
-{
-  appendThird();
-}
+      // the if statement is to check if all of the inputfields were filled out
+    if(four>0 && five > 0 && six > 0)
+    {
+      document.querySelector(".input-container-big").innerHTML = data;
+    }
+
+    else
+    {
+      appendThird();
+    }
 }
 
 // navigate to tips and trick 
