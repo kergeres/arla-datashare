@@ -156,17 +156,6 @@ function appendFirst() {
            </div>
 
 
-
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-<p id="text1" style="display:none">Checkbox is CHECKED!</p>
-<p id="text2" style="display:none">Checkbox is CHECKED!</p>
-<p id="text3" style="display:none">Checkbox is CHECKED!</p>
-<p id="text4" style="display:none">Checkbox is CHECKED!</p>
-<p id="text5" style="display:none">Checkbox is CHECKED!</p>
-<p id="text6" style="display:none">Checkbox is CHECKED!</p>
-<p id="text7" style="display:none">Checkbox is CHECKED!</p>
-
-
     </div> 
   
 
@@ -462,13 +451,13 @@ function empty() {
 // Array of objects
 let _data = [];
 
-let footprintCalculated = Math.floor(Math.random() * 554) + 500 ;
+let footprintCalculated = Math.floor(Math.random() * (554 + 1 - 500)) + 500 ;
 console.log(footprintCalculated);
 
 
 function footprintCalculation() {
 
-  footprintCalculated = footprintCalculated + 1;
+  footprintCalculated = footprintCalculated;
  
 }
 
