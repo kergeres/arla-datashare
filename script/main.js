@@ -175,7 +175,10 @@ function appendFirst() {
              </div>
            </div>
 
-
+           <div class="navigate-btn-container">
+           <button type="submit"  onclick="appendWelcome()" class="back">back</button>
+           <button type="submit" onclick="appendSecond()" class=" next">Start</button>
+       </div>
     </div> 
   </div>
 
@@ -626,7 +629,7 @@ function appendChart() {
 
 
 const container = document.querySelector('.rating');
-const items = container.querySelectorAll('.rating-item')
+const items = container.querySelectorAll('.rating-item');
 container.onclick = e => {
   const elClass = e.target.classList;
   // change the rating if the user clicks on a different star
